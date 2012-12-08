@@ -217,6 +217,47 @@ curl -X DELETE \
   </tr>
 </table>
 
+#### Stream Track
+Streams a track to the browser
+
+<table>
+  <tr>
+    <td>Method</td>
+    <td colspan=2>GET</td>
+  </tr>
+  <tr>
+    <td>Endpoint</td>
+    <td colspan=2>MusicStreamServer</td>
+  </tr>
+  <tr>
+    <td rowspan=2>URL Params</td>
+    <td><pre>playlist-name</pre> </td>
+    <td>The name of the playlist the track belongs to</td>
+  </tr>
+  <tr>
+    <td><pre>file-name</pre> </td>
+    <td>The name of the track file</td>
+  </tr>
+  <tr>
+    <td>
+      Example Call
+    </td>
+    <td colspan=2>
+        <pre>
+curl -X GET \
+    "http://shell1.doc.ic.ac.uk:53231/CourseWork/MusicStreamServer
+        ?playlist-name=ph-test
+        &file-name=sample.mp3"</pre>
+    </td>
+  </tr>
+  <tr>
+    <td>Response</td>
+    <td colspan=2>
+      The music stream
+    </td>
+  </tr>
+</table>
+
 
 ## Deployment
 
