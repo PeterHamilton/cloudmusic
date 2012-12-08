@@ -6,7 +6,7 @@ Cloud Music Player for Distributed Systems Coursework. Just a README for now.
 
 ### Web Interface
 
-The web interface can be used by visiting [http://shell1.doc.ic.ac.uk:53231/Coursework/](http://shell1.doc.ic.ac.uk:53231/Coursework/)
+The web interface can be used by visiting [http://shell1.doc.ic.ac.uk:53231/CourseWork/](http://shell1.doc.ic.ac.uk:53231/CourseWork/)
 
 ### API
 
