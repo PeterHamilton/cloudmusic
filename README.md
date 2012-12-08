@@ -27,17 +27,16 @@ Returns all the available playlists
       Example Call
     </td>
     <td colspan=2>
-    <code>
-    curl -X GET "http://shell1.doc.ic.ac.uk:53231/CourseWork/MusicManagementService?action=get-playlists"
-    </code>
+    <pre>
+curl -X GET \
+    "http://shell1.doc.ic.ac.uk:53231/CourseWork/MusicManagementService?action=get-playlists"</pre>
     </td>
   </tr>
   <tr>
     <td>Response</td>
     <td colspan=2>
-    <code>
-    {"playlists":["ph-test"]}
-    </code>
+    <pre>
+{"playlists":["ph-test"]}</pre>
     </td>
   </tr>
 </table>
@@ -57,7 +56,7 @@ Creates a playlist with the given name
   </tr>
   <tr>
     <td>URL Params</td>
-    <td><code>playlist-name</code> </td>
+    <td><pre>playlist-name</pre> </td>
     <td>The name of the playlist to create</td>
   </tr>
   <tr>
@@ -65,23 +64,22 @@ Creates a playlist with the given name
       Example Call
     </td>
     <td colspan=2>
-    <code>
-    curl -X POST "http://shell1.doc.ic.ac.uk:53231/CourseWork/MusicManagementService?action=create-playlist&playlist-name=ph-npl"
-    </code>
+    <pre>
+curl -X POST \
+    "http://shell1.doc.ic.ac.uk:53231/CourseWork/MusicManagementService?action=create-playlist
+        &playlist-name=ph-npl"</pre>
     </td>
   </tr>
   <tr>
     <td>Response</td>
     <td colspan=2>
-    <code>
-    {"result":"Playlist Created"}
-    </code>
+    <pre>
+{"result":"Playlist Created"}</pre>
     <br/>
-    Or, if an error occurred (duplicates etc), returns HTTP response code <code>400 Bad Request</code> and response content:
+    Or, if an error occurred (duplicates etc), returns HTTP response code <pre>400 Bad Request</pre> and response content:
     <br/>
-    <code>
-    {"result":"Playlist Couldn't be Created"}
-    </code>
+    <pre>
+{"result":"Playlist Couldn't be Created"}</pre>
     </td>
   </tr>
 </table>
@@ -101,7 +99,7 @@ Deletes a playlist and all it's music
   </tr>
   <tr>
     <td>URL Params</td>
-    <td><code>playlist-name</code> </td>
+    <td><pre>playlist-name</pre> </td>
     <td>The name of the playlist to delete</td>
   </tr>
   <tr>
@@ -109,23 +107,22 @@ Deletes a playlist and all it's music
       Example Call
     </td>
     <td colspan=2>
-    <code>
-    curl -X DELETE "http://shell1.doc.ic.ac.uk:53231/CourseWork/MusicManagementService?action=delete-playlist&playlist-name=ph-npl"
-    </code>
+    <pre>
+curl -X DELETE \
+    "http://shell1.doc.ic.ac.uk:53231/CourseWork/MusicManagementService?action=delete-playlist
+        &playlist-name=ph-npl"</pre>
     </td>
   </tr>
   <tr>
     <td>Response</td>
     <td colspan=2>
-    <code>
-    {"result":"Playlist Deleted"}
-    </code>
+    <pre>
+{"result":"Playlist Deleted"}</pre>
     <br/>
-    Or, if the playlist doesn't exist, a <code>400 Bad Request</code> and response:
+    Or, if the playlist doesn't exist, a <pre>400 Bad Request</pre> and response:
     <br/>
-    <code>
-    {"result":"Playlist Couldn't be Found"}
-    </code>
+    <pre>
+{"result":"Playlist Couldn't be Found"}</pre>
     </td>
   </tr>
 </table>
@@ -144,7 +141,7 @@ Creates a playlist with the given name
   </tr>
   <tr>
     <td>URL Params</td>
-    <td><code>playlist-name</code> </td>
+    <td><pre>playlist-name</pre> </td>
     <td>The name of the playlist to get tracks from</td>
   </tr>
   <tr>
@@ -152,23 +149,22 @@ Creates a playlist with the given name
       Example Call
     </td>
     <td colspan=2>
-    <code>
-    curl -X GET "http://shell1.doc.ic.ac.uk:53231/CourseWork/MusicManagementService?action=get-tracks&playlist-name=ph-test"
-    </code>
+    <pre>
+curl -X GET \
+    "http://shell1.doc.ic.ac.uk:53231/CourseWork/MusicManagementService?action=get-tracks
+        &playlist-name=ph-test"</pre>
     </td>
   </tr>
   <tr>
     <td>Response</td>
     <td colspan=2>
-    <code>
-    {"tracks":["sample.mp3"]}
-    </code>
+    <pre>
+{"tracks":["sample.mp3"]}</pre>
     <br/>
-    Or, if the playlist doesn't exist, a <code>400 Bad Request</code> and response:
+    Or, if the playlist doesn't exist, a <pre>400 Bad Request</pre> and response:
     <br/>
-    <code>
-    {"result":"Playlist Couldn't be Found"}
-    </code>
+    <pre>
+{"result":"Playlist Couldn't be Found"}</pre>
     </td>
   </tr>
 </table>
@@ -188,11 +184,11 @@ Deletes a track in a specified playlist
   </tr>
   <tr>
     <td rowspan=2>URL Params</td>
-    <td><code>playlist-name</code> </td>
-    <td>The name of the playlist the tracks belong to</td>
+    <td><pre>playlist-name</pre> </td>
+    <td>The name of the playlist the track belongs to</td>
   </tr>
   <tr>
-    <td><code>file-name</code> </td>
+    <td><pre>file-name</pre> </td>
     <td>The name of the track file</td>
   </tr>
   <tr>
@@ -200,23 +196,23 @@ Deletes a track in a specified playlist
       Example Call
     </td>
     <td colspan=2>
-    <code>
-    curl -X DELETE "http://shell1.doc.ic.ac.uk:53231/CourseWork/MusicManagementService?action=get-tracks&playlist-name=ph-test&file-name=sample.mp3"
-    </code>
+    <pre>
+curl -X DELETE \
+    "http://shell1.doc.ic.ac.uk:53231/CourseWork/MusicManagementService?action=delete-track
+        &playlist-name=ph-test
+        &file-name=sample.mp3"</pre>
     </td>
   </tr>
   <tr>
     <td>Response</td>
     <td colspan=2>
-    <code>
-    {"result":"Deleted Music File"}
-    </code>
+    <pre>
+{"result":"Deleted Music File"}</pre>
     <br/>
-    Or, if the playlist doesn't exist, a <code>400 Bad Request</code> and response:
+    Or, if the playlist doesn't exist, a <pre>400 Bad Request</pre> and response:
     <br/>
-    <code>
-    {"result":"Playlist Couldn't be Found"}
-    </code>
+    <pre>
+{"result":"Playlist Couldn't be Found"}</pre>
     </td>
   </tr>
 </table>
