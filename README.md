@@ -17,6 +17,6 @@ The web interface can be used by visiting [http://shell1.doc.ic.ac.uk:53231/Cour
 On a lab machine: `mktomcat6 TOMCAT_TARGET_DIR`
 Change the port by editing `conf/server.xml`, changing the value in the *Connector* tag but not in the *Server* tag.
 
-1. `cp WAR_FILE TOMCAT_TARGET_DIR`
+1. `cp WAR_FILE TOMCAT_TARGET_DIR/webapps`
 2. `cd TOMCAT_TARGET_DIR`
 3. `tomcat6 start`
